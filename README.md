@@ -4,7 +4,7 @@
 
 ## Déploiement
 
-Tailscale est déployé sous forme de conteneur **LXC Debian**, complété par un **nœud secondaire sur Raspberry Pi** servant de point d'entrée à faible consommation, disponible même si les hyperviseurs principaux sont éteints.
+Tailscale est déployé sous forme de conteneur **LXC Debian**.
 
 ## Particularité LXC — accès au tunnel
 
