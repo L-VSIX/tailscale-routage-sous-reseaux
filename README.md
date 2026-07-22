@@ -19,13 +19,19 @@ lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 
 Le nœud LXC Tailscale annonce les sous-réseaux VLAN internes du homelab (advertise-routes), ce qui permet à un client Tailscale distant d'atteindre directement n'importe quel hôte du LAN interne — pas seulement le nœud Tailscale lui-même — une fois la route approuvée côté console d'administration Tailscale.
 
+```bash
+root@tailscale:~# tailscale up --advertise-routes=192.168.6.0/24,192.168.26.0/24,192.168.46.0/24,192.168.56.0/24,192.168.66.0/24 --reset
+root@tailscale:~# tailscale set --advertise-exit-node
+```
+
 ## Bénéfice de l'approche
 
-Aucun port n'est ouvert côté Livebox : tout le trafic d'administration à distance transite par le réseau maillé (mesh) Tailscale, avec authentification par identité plutôt que par exposition de service.
+Installation en quelques minutes sur Windows, macOS, Linux, iOS, Android ou des serveurs cloud.
+Pas besoin de gérer un serveur VPN central ni de configurer des certificats.
 
 ## Repos liés
 
-- `opnsense-segmentation-vlan` — VLAN VPN dédié
+- [`opnsense-segmentation-vlan`](https://github.com/L-VSIX/opnsense-segmentation-vlan) — VLAN VPN dédié
 - `raspberrypi-point-acces-wifi` — nœud secondaire partagé
 
 ## Auteur
