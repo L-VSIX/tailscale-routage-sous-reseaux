@@ -32,7 +32,6 @@ Pas besoin de gérer un serveur VPN central ni de configurer des certificats.
 ## Repos liés
 
 - [`opnsense-segmentation-vlan`](https://github.com/L-VSIX/opnsense-segmentation-vlan) — VLAN VPN dédié
-- `raspberrypi-point-acces-wifi` — nœud secondaire partagé
 
 ## Auteur
 
